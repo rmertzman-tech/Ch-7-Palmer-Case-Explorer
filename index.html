@@ -974,7 +974,7 @@ function renderResult(data){
   ].map(([l,v,cls])=>`<div class="ucp-metric"><div class="m-label">${l}</div><div class="m-val ${cls}">${v}</div></div>`).join('');
 
   const barsEl = document.getElementById('ucpBars');
-  const bars=[['λ Raw',raw,TEAL_MID],['λ Perceived',perc,'#0ea5e9'],['OS2 Bridge',bridge,'#10b981'],['Friction',friction,'#f59e0b'],['Morphic Supp.',supp,'#dc2626']];
+  const bars=[['λ Raw',raw,'#14b8a6'],['λ Perceived',perc,'#0ea5e9'],['OS2 Bridge',bridge,'#10b981'],['Friction',friction,'#f59e0b'],['Morphic Supp.',supp,'#dc2626']];
   barsEl.innerHTML=bars.map(([l,v,c])=>`<div class="ucp-bar-row"><div class="ucp-bar-label">${l}</div><div class="ucp-bar-track"><div class="ucp-bar-fill" style="width:${Math.min(100,v*100)}%;background:${c}"></div></div></div>`).join('');
 
   const narr = document.getElementById('ucpNarrative');
